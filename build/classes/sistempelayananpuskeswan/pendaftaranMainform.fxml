@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistempelayananpuskeswan.PendaftaranMainformController">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1100.0">
+            <children>
+                <BorderPane layoutX="189.0" layoutY="118.0" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../design/MainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="45.0" prefWidth="1100.0" styleClass="cream-bg" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="45.0" prefWidth="200.0">
+                                    <children>
+                                        <Label layoutX="4.0" layoutY="10.0" text="Sistem Pelayanan Puskeswan" textFill="WHITE">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <styleClass>
+                                        <String fx:value="bg-color-1" />
+                                        <String fx:value="bg-color-2" />
+                                    </styleClass>
+                                </AnchorPane>
+                                <Circle fill="DODGERBLUE" layoutX="871.0" layoutY="22.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Circle fill="#29ff1f" layoutX="938.0" layoutY="14.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Label layoutX="897.0" layoutY="14.0" text="Active" />
+                                <Label layoutX="216.0" layoutY="14.0" text="Selamat Datang," />
+                                <Label fx:id="usermasuk" layoutX="306.0" layoutY="14.0" prefHeight="17.0" prefWidth="135.0" text=" -" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bg-color-2" stylesheets="@../design/MainFormDesign.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="btn_dashboard" layoutX="13.0" layoutY="167.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="169.0" styleClass="nav-btn-2" stylesheets="@../design/PageDesign.css" text="Dashboard" textAlignment="CENTER" />
+                                <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="44.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/dashboard.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btn_pendaftarankartu" layoutX="13.0" layoutY="215.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="169.0" styleClass="nav-btn-2" stylesheets="@../design/PageDesign.css" text="Pendaftaran Kartu" textAlignment="CENTER" />
+                                <Button fx:id="btn_pendaftaranperiksa" layoutX="12.0" layoutY="263.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="169.0" styleClass="nav-btn-2" stylesheets="@../design/PageDesign.css" text="Pendaftaran Periksa" textAlignment="CENTER" />
+                                <Button fx:id="btn_hewan" layoutX="12.0" layoutY="311.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="169.0" styleClass="nav-btn-2" stylesheets="@../design/PageDesign.css" text="Hewan" textAlignment="CENTER" />
+                                <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="24.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/credit-card.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="18.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/edit.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="57.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/animal-shelter.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btn_pemilik" layoutX="13.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="169.0" styleClass="nav-btn-2" stylesheets="@../design/PageDesign.css" text="Pemilik" textAlignment="CENTER" />
+                                <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="56.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/multiple-users-silhouette.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btn_logout" alignment="CENTER" layoutX="21.0" layoutY="524.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="25.0" prefWidth="159.0" styleClass="nav-btn-2" text="Logout" />
+                                <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="56.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/logout_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="60.0" fitWidth="75.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/avatar.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="15.0" layoutY="107.0" text="id user" textFill="WHITE" />
+                                <Label layoutX="15.0" layoutY="124.0" text="username" textFill="WHITE" />
+                                <Label layoutX="76.0" layoutY="124.0" text=":" textFill="WHITE" />
+                                <Label layoutX="77.0" layoutY="107.0" text=":" textFill="WHITE" />
+                                <Label fx:id="iduser" layoutX="83.0" layoutY="107.0" prefHeight="17.0" prefWidth="57.0" text="-" textFill="WHITE" />
+                                <Label fx:id="username" layoutX="83.0" layoutY="124.0" prefHeight="17.0" prefWidth="101.0" text="-" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bg-color-1" stylesheets="@../design/MainFormDesign.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="dashboard_form" layoutX="153.0" layoutY="77.0" prefHeight="554.6666666666666" prefWidth="900.0" styleClass="bg-color-1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="41.0" layoutY="55.0" prefHeight="169.0" prefWidth="817.0">
+                                            <styleClass>
+                                                <String fx:value="cream-bg" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <AnchorPane layoutX="57.0" layoutY="26.0" prefHeight="117.0" prefWidth="200.0">
+                                                    <styleClass>
+                                                        <String fx:value="bg-color-2" />
+                                                        <String fx:value="radius" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="27.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../image/multiple-users-silhouette%20(1).png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="dashboard_TP" layoutX="154.0" layoutY="43.0" text="0" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="82.0" layoutY="87.0" text="Total Pengunjung" textFill="WHITE" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="313.0" layoutY="26.0" prefHeight="117.0" prefWidth="200.0">
+                                                    <styleClass>
+                                                        <String fx:value="bg-color-2" />
+                                                        <String fx:value="radius" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="28.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../image/stethoscope-medical-tool%20(1).png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="dashboard_P" layoutX="155.0" layoutY="38.0" text="0" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="109.0" layoutY="86.0" text="Pemeriksaan" textFill="WHITE" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="566.0" layoutY="26.0" prefHeight="117.0" prefWidth="200.0">
+                                                    <styleClass>
+                                                        <String fx:value="bg-color-2" />
+                                                        <String fx:value="radius" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="28.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../image/vaccines_24dp_FFFF.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="dashboard_V" layoutX="159.0" layoutY="38.0" text="0" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="126.0" layoutY="85.0" text="Vaksinasi" textFill="WHITE" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="chartpane" layoutX="41.0" layoutY="245.0" prefHeight="287.0" prefWidth="817.0">
+                                            <styleClass>
+                                                <String fx:value="cream-bg" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <AreaChart fx:id="areachart" layoutX="7.0" layoutY="14.0" prefHeight="241.0" prefWidth="810.0">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </AreaChart>
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="41.0" layoutY="16.0" text="Dashboard">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="pendaftarankartu_form" layoutX="10.0" layoutY="10.0" prefHeight="554.6666666666666" prefWidth="900.0" styleClass="bg-color-1" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="30.0" layoutY="55.0" prefHeight="489.0" prefWidth="841.0">
+                                            <styleClass>
+                                                <String fx:value="cream-bg" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="45.0" layoutY="17.0" text="NO RM" />
+                                                <TextField fx:id="txt_kartunorm" editable="false" layoutX="152.0" layoutY="14.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="46.0" layoutY="88.0" text="NIK" />
+                                                <TextField fx:id="txt_kartunik" layoutX="152.0" layoutY="86.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="45.0" layoutY="54.0" text="DATA PEMILIK">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="126.0" text="NAMA PEMILIK" />
+                                                <TextField fx:id="txt_kartunamapemilik" layoutX="152.0" layoutY="124.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="510.0" layoutY="89.0" text="ALAMAT" />
+                                                <TextField fx:id="txt_kartualamat" layoutX="610.0" layoutY="85.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="510.0" layoutY="127.0" text="NO HP" />
+                                                <TextField fx:id="txt_kartunohp" layoutX="610.0" layoutY="123.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="45.0" layoutY="167.0" text="DATA HEWAN">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="248.0" text="NAMA HEWAN" />
+                                                <TextField fx:id="txt_kartunamahewan" layoutX="152.0" layoutY="246.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="46.0" layoutY="286.0" text="JENIS HEWAN" />
+                                                <Label layoutX="510.0" layoutY="208.0" text="JENIS KELAMIN" />
+                                                <Button fx:id="btn_kartusimpan" layoutX="688.0" layoutY="435.0" mnemonicParsing="false" onAction="#onSimpan" styleClass="btn-2" text="Simpan" />
+                                                <ComboBox fx:id="combo_kartujekel" layoutX="609.0" layoutY="204.0" prefHeight="25.0" prefWidth="145.0" promptText="Pilih" />
+                                                <Label layoutX="510.0" layoutY="246.0" text="TANGGAL LAHIR" />
+                                                <DatePicker fx:id="kartu_dateTtl" layoutX="611.0" layoutY="241.0" prefHeight="25.0" prefWidth="145.0" />
+                                                <Label layoutX="45.0" layoutY="208.0" text="ID HEWAN" />
+                                                <TextField fx:id="txt_kartuIdHewan" editable="false" layoutX="152.0" layoutY="205.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <ComboBox fx:id="combo_kartujenhew" layoutX="149.0" layoutY="282.0" prefWidth="150.0" promptText="Pilih" />
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="41.0" layoutY="16.0" text="Pendaftaran Kartu">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="pendaftaranperiksa_form" layoutX="10.0" layoutY="10.0" prefHeight="554.6666666666666" prefWidth="900.0" styleClass="bg-color-1" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="30.0" layoutY="55.0" prefHeight="483.0" prefWidth="841.0">
+                                            <styleClass>
+                                                <String fx:value="cream-bg" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="45.0" layoutY="35.0" text="ID HEWAN" />
+                                                <TextField fx:id="txt_periksaIdhewan" editable="false" layoutX="152.0" layoutY="32.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="46.0" layoutY="88.0" text="NAMA HEWAN" />
+                                                <TextField fx:id="txt_periksanmhewan" editable="false" layoutX="152.0" layoutY="86.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="46.0" layoutY="169.0" text="KEPERLUAN" />
+                                                <Label layoutX="510.0" layoutY="89.0" text="UMUR" />
+                                                <TextField fx:id="txt_periksaumur" layoutX="610.0" layoutY="85.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="510.0" layoutY="127.0" text="KELUHAN" />
+                                                <Button fx:id="btn_periksasimpan" layoutX="690.0" layoutY="196.0" mnemonicParsing="false" onAction="#onPeriksaSimpan" styleClass="btn-2" text="Simpan" />
+                                                <Button fx:id="btn_periksacari" layoutX="309.0" layoutY="32.0" mnemonicParsing="false" onAction="#onCariHewan" styleClass="btn-2" text="Cari" />
+                                                <Label layoutX="510.0" layoutY="36.0" text="TANGGAL" />
+                                                <TextField fx:id="txt_periksatanggal" editable="false" layoutX="610.0" layoutY="32.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="46.0" layoutY="127.0" text="BERAT BADAN" />
+                                                <TextField fx:id="txt_periksaBB" layoutX="152.0" layoutY="125.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <ComboBox fx:id="combo_periksakeperluan" layoutX="152.0" layoutY="165.0" prefHeight="25.0" prefWidth="145.0" promptText="Pilih" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <TableView fx:id="tbl_periksa" layoutX="46.0" layoutY="234.0" prefHeight="221.0" prefWidth="711.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="periksa_col_tanggal" text="Tanggal" />
+                                                        <TableColumn fx:id="periksa_col_idhewan" prefWidth="75.0" text="Id Hewan" />
+                                                        <TableColumn fx:id="periksa_col_namhew" prefWidth="98.0" text="Nama Hewan" />
+                                                        <TableColumn fx:id="periksa_col_umur" prefWidth="75.0" text="Umur" />
+                                                        <TableColumn fx:id="periksa_col_bb" prefWidth="75.0" text="BB (kg)" />
+                                                        <TableColumn fx:id="periksa_col_keperluan" prefWidth="96.0" text="Keperluan" />
+                                                        <TableColumn fx:id="periksa_col_keluhan" prefWidth="129.0" text="Keluhan" />
+                                                        <TableColumn fx:id="periksa_col_status" prefWidth="90.0" text="Status" />
+                                                    </columns>
+                                                </TableView>
+                                                <Label layoutX="46.0" layoutY="211.0" text="Tabel  Pemeriksaan Hari Ini">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextArea fx:id="area_periksaKeluhan" layoutX="610.0" layoutY="126.0" prefHeight="57.0" prefWidth="146.0" />
+                                                <Label layoutX="309.0" layoutY="128.0" text="Kg" />
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="41.0" layoutY="16.0" text="Pendaftaran Periksa">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="hewan_form" layoutX="10.0" layoutY="10.0" prefHeight="554.6666666666666" prefWidth="900.0" styleClass="bg-color-1" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="29.0" layoutY="62.0" prefHeight="472.0" prefWidth="841.0">
+                                            <styleClass>
+                                                <String fx:value="cream-bg" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="531.0" layoutY="58.0" text="NO RM" />
+                                                <TextField fx:id="txt_hewannorm" layoutX="663.0" layoutY="55.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="532.0" layoutY="162.0" text="NAMA HEWAN" />
+                                                <TextField fx:id="txt_hewannama" layoutX="663.0" layoutY="160.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Label layoutX="532.0" layoutY="199.0" text="JENIS HEWAN" />
+                                                <Label layoutX="533.0" layoutY="237.0" text="JENIS KELAMIN" />
+                                                <Button fx:id="btn_hewansimpan" layoutX="742.0" layoutY="315.0" mnemonicParsing="false" onAction="#onHewanSimpan" styleClass="btn-2" text="Simpan" />
+                                                <Button fx:id="btn_cetakrekammedishewan" layoutX="324.0" layoutY="409.0" mnemonicParsing="false" onAction="#cetakRekamMedis" styleClass="btn-2" text="Cetak Rekam Medis Hewan" />
+                                                <ComboBox fx:id="combo_hewanjekel" layoutX="662.0" layoutY="233.0" prefHeight="25.0" prefWidth="145.0" promptText="Pilih" />
+                                                <TextField fx:id="txt_hewancari" layoutX="14.0" layoutY="21.0" prefHeight="23.0" prefWidth="169.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <Button fx:id="btn_hewanhapus" layoutX="236.0" layoutY="409.0" mnemonicParsing="false" onAction="#hapusHewan" styleClass="btn-2" text="Hapus" />
+                                                <Label layoutX="533.0" layoutY="277.0" text="TANGGAL LAHIR" />
+                                                <DatePicker fx:id="date_hewanttl" layoutX="662.0" layoutY="271.0" prefHeight="25.0" prefWidth="147.0" />
+                                                <Label layoutX="532.0" layoutY="91.0" text="NAMA PEMILIK" />
+                                                <TextField fx:id="txt_hewannamaPemilik" editable="false" layoutX="663.0" layoutY="89.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                                <ComboBox fx:id="combo_hewanjenhew" layoutX="661.0" layoutY="195.0" prefHeight="25.0" prefWidth="147.0" promptText="Pilih" />
+                                                <Label layoutX="532.0" layoutY="127.0" text="ID HEWAN" />
+                                                <TableView fx:id="tbl_hewan" layoutX="14.0" layoutY="56.0" prefHeight="340.0" prefWidth="504.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="hewan_col_idhewan" prefWidth="57.0" text="Id hewan" />
+                                                        <TableColumn fx:id="hewan_col_namhew" prefWidth="82.0" text="Nama Hewan" />
+                                                        <TableColumn fx:id="hewan_col_jenhew" prefWidth="85.99996948242188" text="Jenis Hewan" />
+                                                        <TableColumn fx:id="hewan_col_jekel" prefWidth="87.33328247070312" text="Jenis Kelamin" />
+                                                        <TableColumn fx:id="hewan_col_ttl" prefWidth="89.33331298828125" text="Tanggal Lahir" />
+                                                        <TableColumn fx:id="hewan_col_nmPemilik" prefWidth="99.99993896484375" text="Nama Pemilik" />
+                                                    </columns>
+                                                </TableView>
+                                                <TextField fx:id="txt_hewanIdHewan" editable="false" layoutX="663.0" layoutY="125.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="41.0" layoutY="16.0" text="Hewan">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="pemilik_form" layoutX="10.0" layoutY="10.0" prefHeight="554.6666666666666" prefWidth="900.0" styleClass="bg-color-1" stylesheets="@../design/MainFormDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="27.0" layoutY="55.0" prefHeight="489.0" prefWidth="841.0">
+                                            <styleClass>
+                                                <String fx:value="cream-bg" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <TableView fx:id="tbl_pemilik" layoutX="17.0" layoutY="72.0" prefHeight="373.0" prefWidth="707.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="pemilik_col_norm" prefWidth="75.0" text="NO RM" />
+                                                        <TableColumn fx:id="pemilik_col_nik" prefWidth="150.0" text="NIK" />
+                                                        <TableColumn fx:id="pemilik_col_namapemilik" prefWidth="200.0" text="Nama Pemilik" />
+                                                        <TableColumn fx:id="pemilik_col_alamat" prefWidth="150.0" text="Alamat" />
+                                                        <TableColumn fx:id="pemilik_col_nohp" prefWidth="129.0" text="No HP" />
+                                                    </columns>
+                                                </TableView>
+                                                <Button fx:id="btn_pemilikhapus" layoutX="548.0" layoutY="456.0" mnemonicParsing="false" onAction="#hapusPemilik" styleClass="btn-2" text="Hapus" />
+                                                <Button fx:id="btn_pemilikcetakkartu" layoutX="631.0" layoutY="456.0" mnemonicParsing="false" onAction="#cetakKartuPuskeswan" styleClass="btn-2" text="Cetak Kartu" />
+                                                <TextField fx:id="txt_pemilikcari" layoutX="17.0" layoutY="30.0" prefHeight="23.0" prefWidth="169.0" styleClass="textfield-2" stylesheets="@../design/PageDesign.css" />
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="41.0" layoutY="16.0" text="Pemilik">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

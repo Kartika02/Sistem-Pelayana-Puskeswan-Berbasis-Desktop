@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="255" pageHeight="155" columnWidth="215" leftMargin="20" rightMargin="20" topMargin="11" bottomMargin="11" uuid="b51b649b-7262-46a1-ad4e-774d945abe03">
+    <property name="ireport.zoom" value="3.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <parameter name="noRM" class="java.lang.String">
+        <defaultValueExpression><![CDATA[]]></defaultValueExpression>
+    </parameter>
+    <parameter name="logo" class="byte[]"/>
+    <queryString>
+		<![CDATA[SELECT noRM, namaPemilik, alamat, noHP
+FROM pemilikhewan
+WHERE noRM = $P{noRM}]]>
+    </queryString>
+    <field name="noRM" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="namaPemilik" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="alamat" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="noHP" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <background>
+        <band/>
+    </background>
+    <title>
+        <band height="47">
+            <staticText>
+                <reportElement x="52" y="6" width="145" height="18" forecolor="#000000" backcolor="#000000" uuid="c33f0963-4ddc-4d13-91b9-b04b8209635d"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Times New Roman" size="13" isBold="true"/>
+                </textElement>
+                <text><![CDATA[KARTU PUSKESWAN]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="52" y="24" width="145" height="15" forecolor="#000000" uuid="b06042c0-fb22-4ad3-bc70-527f5b42a8da"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Times New Roman" size="5" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Jl. Gajah Mada No. 74 Kel. Proyonanggan Selatan Kec. Batang Kabupaten Batang]]></text>
+            </staticText>
+            <image>
+                <reportElement x="13" y="5" width="30" height="30" uuid="94c38fa5-b7ed-4284-b33e-71c652fa47d1"/>
+                <imageExpression><![CDATA[$P{logo}]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <pageHeader>
+        <band/>
+    </pageHeader>
+    <columnHeader>
+        <band/>
+    </columnHeader>
+    <detail>
+        <band height="66">
+            <textField>
+                <reportElement x="67" y="3" width="68" height="16" uuid="f94e84d6-a97f-4092-a3e7-91d06a584266"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{noRM}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement mode="Opaque" x="7" y="3" width="53" height="16" forecolor="#000000" backcolor="#FFFFFF" uuid="54e4d188-3830-46d1-88ca-48de76efac7a"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[NO RM]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="67" y="21" width="60" height="13" uuid="f62db461-d98c-4fa5-8339-6664f98944b6"/>
+                <textElement>
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{namaPemilik}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="67" y="31" width="60" height="13" uuid="bb3cded1-6992-4e1f-b625-dcbcb80dafb7"/>
+                <textElement>
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="67" y="42" width="60" height="13" uuid="d02b5ef5-b078-427a-aea3-76d2b7f088ed"/>
+                <textElement>
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{noHP}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement mode="Opaque" x="7" y="21" width="47" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="abb99ebe-b0b9-45de-bc82-88009cc75a18"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Nama Pemilik]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="7" y="31" width="47" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="5f465bea-d024-4a29-93de-a4d3b1183510"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Alamat]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="7" y="42" width="47" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="1093ea38-aed6-465e-8793-0a723e8b71d3"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[No HP]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="63" y="31" width="2" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="ad6b206d-bd96-42e1-9a15-9686a053d786"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="63" y="20" width="2" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="2306b670-35f8-4dcf-808a-5771ec09dfb8"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="63" y="42" width="2" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="b292ee1b-e8e4-4439-8d73-88f971503844"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="62" y="2" width="6" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="9b9b66b8-90e9-4c92-8282-533b9ab2d176"/>
+                <textElement textAlignment="Left">
+                    <font size="10" isBold="true"/>
+                </textElement>
+                <text><![CDATA[:]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <columnFooter>
+        <band/>
+    </columnFooter>
+    <pageFooter>
+        <band/>
+    </pageFooter>
+    <summary>
+        <band/>
+    </summary>
+</jasperReport>
