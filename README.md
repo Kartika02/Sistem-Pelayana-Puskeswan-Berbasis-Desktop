@@ -2,14 +2,21 @@
 
 tampilan 
 
-<img width="454" height="797" alt="Image" src="https://github.com/user-attachments/assets/6bd5ab95-7cd5-4f8b-9491-d0955a34bf65" />
+Login Pendaftaran
+<img width="1654" height="977" alt="Image" src="https://github.com/user-attachments/assets/b7996f80-daac-446f-b57c-a9eadcc20c3d" />
+
+Registrasi pendaftaran
 <img width="454" height="797" alt="Image" src="https://github.com/user-attachments/assets/4794e00f-420b-4f6b-be40-ca1796c512ca" />
 
+Dashboard Pendaftaran
+<img width="567" height="816" alt="Image" src="https://github.com/user-attachments/assets/48e42b91-3afd-4980-a679-450d6758a633" />
+
+Pendaftaran Kartu Puskeswan
 <img width="1654" height="977" alt="Image" src="https://github.com/user-attachments/assets/6dcd8388-92ab-41e2-8f46-4bc56f718723" />
 
-
-
+Pendaftaran Periksa
 <img width="1649" height="970" alt="Image" src="https://github.com/user-attachments/assets/03f6a077-7640-4298-a862-c88bc200eecc" />
+
 
 <img width="1654" height="977" alt="Image" src="https://github.com/user-attachments/assets/679360a6-abc0-482f-bdff-bf188c4dd396" />
 
